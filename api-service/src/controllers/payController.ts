@@ -1,5 +1,5 @@
 class PayController {
-    processPayment(req, res) {
+    processPayment(req: { body: { amount: any; currency: any; }; }, res: { json: (arg0: { status: string; transactionId: string; amount: any; currency: any; message: string; }) => void; }) {
         const mockResponse = {
             status: "success",
             transactionId: "123456789",
